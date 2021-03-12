@@ -31,18 +31,27 @@ def random_color():
 #         tim.forward(100)
 #         tim.right(angle)
 
-directions = [0, 90, 180, 270]
-tim.pensize(10)
-distance = 30
+# directions = [0, 90, 180, 270]
+# tim.pensize(10)
+# distance = 30
+# tim.speed("fastest")
+#
+# for i in range(300):
+#     direction = random.choice(directions)
+#     tim.color(random_color())
+#     tim.forward(distance)
+#     tim.setheading(direction)
 tim.speed("fastest")
 
-for i in range(300):
-    direction = random.choice(directions)
-    tim.color(random_color())
-    tim.forward(distance)
-    tim.setheading(direction)
+
+def draw_spinograph(size_of_gap):
+    for i in range(int(360/size_of_gap)):
+        tim.color(random_color())
+        tim.setheading(tim.heading()+size_of_gap)
+        tim.circle(100)
 
 
+draw_spinograph(10)
 
 screen = t.Screen()
 screen.exitonclick()
