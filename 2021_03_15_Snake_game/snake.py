@@ -6,10 +6,6 @@ class Snake:
     def __init__(self):
         self.segments = []
         self.create_snake()
-        self.up()
-        self.down()
-        self.left()
-        self.right()
 
     def create_snake(self):
         for position in STARTING_POSITIONS:
